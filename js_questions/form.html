@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation</title>
+</head>
+<body>
+
+<form id="login-form">
+  <input type="text" id="username" placeholder="Enter username" />
+  <input type="password" id="password" placeholder="Enter password" />
+  <button type="submit">Login</button>
+</form>
+
+<div id="error-message" style="color: red;"></div>
+
+<script>
+  const form = document.getElementById("login-form");
+  const errorDiv = document.getElementById("error-message");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    if (!username || !password) {
+      errorDiv.textContent = "Both fields are required";
+    } else {
+      errorDiv.textContent = "";
+      console.log("Form Submitted");
+    }
+  });
+</script>
+
+</body>
+</html>

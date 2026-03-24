@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Manipulation</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 40px;
+      text-align: center;
+    }
+
+    #user-list {
+      width: 300px;
+      margin: 0 auto 20px;
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+
+    button {
+      margin: 5px;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    #add-user-btn {
+      background-color: #28a745;
+      color: white;
+    }
+
+    #add-user-btn:hover {
+      background-color: #218838;
+    }
+
+    #remove-user-btn {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    #remove-user-btn:hover {
+      background-color: #c82333;
+    }
+  </style>
+</head>
+
+<body>
+
+<h2>User List</h2>
+
+<div id="user-list">
+  <ul>
+    <li>Alice</li>
+    <li>Bob</li>
+    <li>Charlie</li>
+  </ul>
+</div>
+
+<button id="add-user-btn">Add User</button>
+<button id="remove-user-btn">Remove First User</button>
+
+<script>
+  const ul = document.querySelector("#user-list ul");
+  const addBtn = document.getElementById("add-user-btn");
+  const removeBtn = document.getElementById("remove-user-btn");
+
+  // Add "David"
+  addBtn.addEventListener("click", function () {
+    const newUser = document.createElement("li");
+    newUser.textContent = "David";
+    ul.appendChild(newUser);
+  });
+
+  // Remove first user
+  removeBtn.addEventListener("click", function () {
+    if (ul.firstElementChild) {
+      ul.removeChild(ul.firstElementChild);
+    }
+  });
+</script>
+
+</body>
+</html>
