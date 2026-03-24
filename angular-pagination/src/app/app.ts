@@ -37,7 +37,7 @@ export class App {
       { first_name: 'John', email: 'john@reqres.in', avatar: 'https://i.pravatar.cc/150?img=12' },
       { first_name: 'Jaison', email: 'jaison@reqres.in', avatar: 'https://i.pravatar.cc/150?img=13' },
       { first_name: 'Antony', email: 'antony@reqres.in', avatar: 'https://i.pravatar.cc/150?img=14' },
-      { first_name: 'Mary', email: 'mary@reqres.in', avatar: 'https://i.pravatar.cc/150?img=14' }
+      { first_name: 'Mary', email: 'mary@reqres.in', avatar: 'https://i.pravatar.cc/150?img=15' }
     ];
 
     this.totalPages = Math.ceil(allUsers.length / this.perPage);
